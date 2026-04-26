@@ -1,9 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Users, Car, Package } from "lucide-react";
+import { Users, Car, Package, MapPin } from "lucide-react";
 
 const services = [
+  {
+    icon: MapPin,
+    title: "Đưa đón tận nơi",
+    price: "Giá cả phải chăng",
+    desc: "Đón tận nhà, trả tận nơi. Không cần ra bến xe, không lo trễ giờ.",
+    color: "orange",
+  },
   {
     icon: Users,
     title: "Ghép ghế",
@@ -28,6 +35,7 @@ const services = [
 ];
 
 const colors = {
+  orange: { wrap: "border-orange-500/20 bg-orange-500/5", icon: "bg-orange-500/10 text-orange-400", price: "text-orange-400" },
   blue:   { wrap: "border-blue-500/20 bg-blue-500/5",   icon: "bg-blue-500/10 text-blue-400",   price: "text-blue-400" },
   green:  { wrap: "border-emerald-500/20 bg-emerald-500/5", icon: "bg-emerald-500/10 text-emerald-400", price: "text-emerald-400" },
   violet: { wrap: "border-violet-500/20 bg-violet-500/5",  icon: "bg-violet-500/10 text-violet-400",  price: "text-violet-400" },
@@ -45,11 +53,11 @@ export function HowItWorks() {
         >
           <p className="text-xs text-blue-400 font-semibold tracking-widest uppercase mb-3">Dịch vụ</p>
           <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
-            3 dịch vụ, 1 số điện thoại
+            Chúng tôi có các dịch vụ
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           {services.map((svc, i) => {
             const c = colors[svc.color as keyof typeof colors];
             return (
