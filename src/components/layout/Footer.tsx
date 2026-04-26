@@ -1,9 +1,10 @@
-import { Phone, MapPin } from "lucide-react";
+import { Phone, MapPin, Facebook } from "lucide-react";
 import { ZaloIcon } from "@/components/ui/ZaloIcon";
 
 const PHONE = "0968153937";
 const PHONE_DISPLAY = "0968 153 937";
 const ZALO_LINK = `https://zalo.me/${PHONE}`;
+const FB_LINK = "https://www.facebook.com/profile.php?id=61572620341776";
 
 // Footer tối giản cho landing page
 export function Footer() {
@@ -39,6 +40,16 @@ export function Footer() {
             >
               <ZaloIcon size={14} className="text-blue-400" />
               Zalo
+            </a>
+            <span className="text-zinc-800">|</span>
+            <a
+              href={FB_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm text-zinc-400 hover:text-white transition-colors"
+            >
+              <Facebook size={14} className="text-blue-400" />
+              Facebook
             </a>
             <span className="text-zinc-800">|</span>
             <span className="flex items-center gap-1 text-xs text-zinc-600">
