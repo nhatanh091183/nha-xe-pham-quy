@@ -1,5 +1,6 @@
-import { Phone, MapPin, Facebook } from "lucide-react";
+import { Phone, MapPin } from "lucide-react";
 import { ZaloIcon } from "@/components/ui/ZaloIcon";
+import { FacebookIcon } from "@/components/ui/FacebookIcon";
 
 const PHONE = "0968153937";
 const PHONE_DISPLAY = "0968 153 937";
@@ -48,7 +49,7 @@ export function Footer() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm text-zinc-400 hover:text-white transition-colors"
             >
-              <Facebook size={14} className="text-blue-400" />
+              <FacebookIcon size={14} className="text-blue-400" />
               Facebook
             </a>
             <span className="text-zinc-800">|</span>
